@@ -37,25 +37,27 @@ __rm() {
 }
 
 __create_df "amazoncorretto:8u212" "DockerfileCorreto8u212"
-__create_df "openjdk:8u212" "DockerfileOpen8u212"
 __create_df "amazoncorretto:8u192" "DockerfileCorreto8u192"
+__create_df "openjdk:8u212" "DockerfileOpen8u212"
 __create_df "openjdk:8u181" "DockerfileOpen8u181"
 __create_df "openjdk:8u102" "DockerfileOpen8u102"
 
 __build "jvm-test-correto8u212" "DockerfileCorreto8u212"
-__build "jvm-test-open8u212" "DockerfileOpen8u212"
 __build "jvm-test-correto8u192" "DockerfileCorreto8u192"
+__build "jvm-test-open8u212" "DockerfileOpen8u212"
 __build "jvm-test-open8u181" "DockerfileOpen8u181"
 __build "jvm-test-open8u102" "DockerfileOpen8u102"
 
-__go "jvm-test-correto8u212"
-__go "jvm-test-open8u212"
-__go "jvm-test-correto8u192"
-__go "jvm-test-open8u181"
-__go "jvm-test-open8u102"
+rm -rf result.txt
+touch result.txt
+__go "jvm-test-correto8u212" >>result.txt
+__go "jvm-test-correto8u192" >>result.txt
+__go "jvm-test-open8u212" >>result.txt
+__go "jvm-test-open8u181" >>result.txt
+__go "jvm-test-open8u102" >>result.txt
 
 __rm "jvm-test-correto8u212"
-__rm "jvm-test-open8u212"
 __rm "jvm-test-correto8u192"
+__rm "jvm-test-open8u212"
 __rm "jvm-test-open8u181"
 __rm "jvm-test-open8u102"
