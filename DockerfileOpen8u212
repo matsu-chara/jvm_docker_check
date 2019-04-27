@@ -1,6 +1,0 @@
-FROM openjdk:8u212
-
-WORKDIR /home
-COPY Print.java .
-RUN javac Print.java
-ENTRYPOINT java Print

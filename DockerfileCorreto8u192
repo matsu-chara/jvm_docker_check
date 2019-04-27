@@ -1,6 +1,0 @@
-FROM amazoncorretto:8u192
-
-WORKDIR /home
-COPY Print.java .
-RUN javac Print.java
-ENTRYPOINT java Print
