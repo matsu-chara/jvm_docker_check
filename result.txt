@@ -5,14 +5,14 @@ cpu:1
 memory:121
 cpu:2
 memory:444
-jvm-test-open8u212
+jvm-test-correto8u192
 cpu:1
 memory:123
 cpu:1
 memory:121
 cpu:2
 memory:444
-jvm-test-correto8u192
+jvm-test-open8u212
 cpu:1
 memory:123
 cpu:1
